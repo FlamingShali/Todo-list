@@ -1,1 +1,6 @@
-Just started doing my own todo list. It's completely built from scratch and is unfinished. 
+This project is simple TO-DO list. 
+
+Just type what you want to add it to the list.
+
+Script works and allows to add your text to the list. It will be saved in local storage so you can refresh page whenever you want.
+
