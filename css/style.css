@@ -1,0 +1,23 @@
+body {
+  background-color: #bac8ff; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  position: relative; }
+
+.main {
+  background-color: red;
+  width: 60rem;
+  height: 80rem;
+  grid-column: 3/ 4;
+  text-align: center; }
+
+.todo-box {
+  background-color: red;
+  width: 50rem;
+  height: 60rem; }
