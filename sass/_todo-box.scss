@@ -3,18 +3,97 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   position: relative;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 150rem;
 }
 
-.main {
-  background-color: red;
-  width: 60rem;
-  height: 80rem;
-  grid-column: 3/ 4;
-  text-align: center;
+.heading-primary{
+    grid-column: 3/5;
+    grid-row: 2/3;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--color-primary-dark);
 }
 
 .todo-box {
-  background-color: red;
-  width: 50rem;
-  height: 60rem;
+  background-color: var(--color-secondary);
+  grid-column: 2/3;
+  grid-row: 2/4;
+  background-color: #fff;
+  display: grid;
+  padding: 2rem;
+  grid-template-rows: repeat(10, 1fr);
+  border-radius: 15px;
+}
+
+.todo-input {
+  border: none;
+  border-radius: 10px;
+  width: 40rem;
+  height: 4rem;
+  grid-row: 2/3;
+  background-color: #d0d6db;
+}
+
+.btn-add {
+  border: none;
+  text-decoration: none;
+  height: 3rem;
+  border-radius: 5px;
+  background-color: var(--color-primary-dark);
+  width: 15rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  grid-row: 3/4;
+}
+
+.btn-add:hover,
+.btn-add:active {
+  background-color: var(--color-primary);
+}
+
+.posts-list {
+  background-color: #fff;
+  grid-row: 4/-1;
+  display: flex;
+  flex-direction: column;
+  
+  
+
+  &__post {
+    padding: 1rem;
+    height: 1;
+    font-size: 2rem;
+    background-color: var(--color-primary-light);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+}
+
+.heading-secondary{
+    font-size: 2rem;
+}
+
+.btn-remove{
+    border: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-remove:hover,
+.btn-remove:active{
+transform: scale(1.5);
+
 }

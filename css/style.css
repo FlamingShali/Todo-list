@@ -1,23 +1,108 @@
-body {
-  background-color: #bac8ff; }
+:root {
+  --color-primary: #339af0;
+  --color-primary-light: #e7f5ff;
+  --color-primary-dark: #1864ab;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--color-grey-light-2); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; }
 
 body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  position: relative; }
+  position: relative;
+  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light));
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 150rem; }
 
-.main {
-  background-color: red;
-  width: 60rem;
-  height: 80rem;
-  grid-column: 3/ 4;
-  text-align: center; }
+.heading-primary {
+  grid-column: 3/5;
+  grid-row: 2/3;
+  text-align: center;
+  font-weight: 700;
+  font-size: 5rem;
+  color: var(--color-primary-dark); }
 
 .todo-box {
-  background-color: red;
-  width: 50rem;
-  height: 60rem; }
+  background-color: var(--color-secondary);
+  grid-column: 2/3;
+  grid-row: 2/4;
+  background-color: #fff;
+  display: grid;
+  padding: 2rem;
+  grid-template-rows: repeat(10, 1fr);
+  border-radius: 15px; }
+
+.todo-input {
+  border: none;
+  border-radius: 10px;
+  width: 40rem;
+  height: 4rem;
+  grid-row: 2/3;
+  background-color: #d0d6db; }
+
+.btn-add {
+  border: none;
+  text-decoration: none;
+  height: 3rem;
+  border-radius: 5px;
+  background-color: var(--color-primary-dark);
+  width: 15rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  grid-row: 3/4; }
+
+.btn-add:hover,
+.btn-add:active {
+  background-color: var(--color-primary); }
+
+.posts-list {
+  background-color: #fff;
+  grid-row: 4/-1;
+  display: flex;
+  flex-direction: column; }
+  .posts-list__post {
+    padding: 1rem;
+    height: 1;
+    font-size: 2rem;
+    background-color: var(--color-primary-light);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    border-radius: 10px; }
+
+.heading-secondary {
+  font-size: 2rem; }
+
+.btn-remove {
+  border: none;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s; }
+
+.btn-remove:hover,
+.btn-remove:active {
+  transform: scale(1.5); }
